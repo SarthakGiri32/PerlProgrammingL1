@@ -8,7 +8,7 @@ my $hereDocumentEnding = <<"End of file";
 This is an example of a "here" document
 Finally got it working. In tutorials point, they don't explain the importance of global variables vs local variables
 So if you only use "\$<variable_name> = <variable_value>", then it will throw a compile time error (irrespective of
-using "use strict;" at the start of the script). You need to user "my \$<variable_name> = <variable_value>", which will
+using "use strict;" at the start of the script). You need to use "my \$<variable_name> = <variable_value>", which will
 create a local variable that can be used in a script
 
 Example variable value = $expVariable\nEnd of here document
@@ -17,8 +17,8 @@ End of file
 my $hereDocumentEndingSingleQuotes = <<'End of file';
 This is an example of a "here" document
 Finally got it working. In tutorials point, they don't explain the importance of global variables vs local variables
-So if you only use "$<variable_name> = <variable_value>", then it will throw a compile time error (irrespective of
-using "use strict;" at the start of the script). You need to user "my $<variable_name> = <variable_value>", which will
+So if you only use "\$<variable_name> = <variable_value>", then it will throw a compile time error (irrespective of
+using "use strict;" at the start of the script). You need to user "my \$<variable_name> = <variable_value>", which will
 create a local variable that can be used in a script.
 
 This document's EOF is defined using single quotes, so variables and special characters will not be interpolated
@@ -26,5 +26,18 @@ This document's EOF is defined using single quotes, so variables and special cha
 Example variable value = $expVariable\nEnd of here document
 End of file
 
+my $hereDocEndingNoQuotesIdentifier = <<endOfFile;
+This is an example of a "here" document
+Finally got it working. In tutorials point, they don't explain the importance of global variables vs local variables
+So if you only use "\$<variable_name> = <variable_value>", then it will throw a compile time error (irrespective of
+using "use strict;" at the start of the script). You need to user "my \$<variable_name> = <variable_value>", which will
+create a local variable that can be used in a script.
+
+This document's \tEOF is defined using a no quotes identifier, so variables and special characters will not be interpolated
+
+\tExample variable value = $expVariable\nEnd of here document
+endOfFile
+
 print("$hereDocumentEnding\n");
 print("$hereDocumentEndingSingleQuotes\n");
+print("$hereDocEndingNoQuotesIdentifier\n")

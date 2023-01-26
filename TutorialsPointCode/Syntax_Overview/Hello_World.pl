@@ -6,6 +6,14 @@ use warnings FATAL => 'all';
 print("Hello. \tWorld!
 \tHow you doin'!!\n");
 
+print("Hello.\tWorld!\n\tHow you doin'!!\n");
+
+print("Hello.\tWorld!\tHow you doin'!!\n");
+
+print("Hello.\tWorld!\nHow you doin'!!");
+
+print("\nHello.\tWorld!\nHow you doin'!!");
+
 =begin comment
 This is my first experience with scripting in Perl.
 I hope that I can complete this practice skill learning in time,
